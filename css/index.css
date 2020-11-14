@@ -8,13 +8,14 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    height: 1000px;
 }
 
 body {
     padding: 0;
     margin: 0;
-
-}
+    height: 1500ps;
+    }
 
 /*Navigation Styles*/
 nav {
@@ -25,7 +26,7 @@ nav {
     padding: 10px 20px;
     top: 0;
     background-color: rgba(241,214,219,0.25);
-    backdrop-filter: blur (8px);
+    backdrop-filter: blur(8px);
     width:100%;
     align-items: center;
 }
@@ -50,11 +51,11 @@ nav {
 
 /*Hero Styles*/
 section {
-    margin-bottom: 80px;
-}
+    width:100%;
+    }
     .hero {
         float:top;
-        height: 900px;
+        height: 800px;
         width: 100%;
         overflow: hidden;
     }
@@ -63,23 +64,85 @@ section {
             flex-direction: column;
             align-items: flex-start;
             position: absolute;
-            margin: 0 80px;
             top: 200px;
+            width:100%;
         }
             .greeting {
-                margin-bottom: 20px;   
+                margin: 0 0 20px 80px;   
             }
             #statement {
                 font-size: 24px;
-                margin: 0 0 10px 0;
+                margin: 0 0 10px 80px;
             }
             #end-statement {
-                margin-bottom: 40px;
+                margin: 0 0 40px 80px;
             }
-            .languages {
+            #languages {
                 display:flex;
                 align-items: top;
+                overflow: visible;
+                margin-left: 80px;
                 }
+                .english {
+                    background-image: url(../icons/emojione_flag-for-united-kingdom.svg);
+                    background-repeat: no-repeat;
+                    min-width: 99px;
+                    min-height: 99px;
+                    overflow: visible;
+                    border: 2px solid black;
+                    border-radius: 50px;
+                    margin-right: 10px;
+                }
+                .russian {
+                    background-image: url(../icons/emojione_flag-for-russia-disabled.svg);
+                    background-repeat: no-repeat;
+                    min-width: 99px;
+                    min-height: 99px;
+                    margin: 0 10px;
+                }
+                .russian:hover {
+                    background-image: url(../icons/emojione_flag-for-russia.svg);
+                    background-repeat: no-repeat;
+                }
+                .vietnam {
+                    background-image: url(../icons/emojione_flag-for-vietnam-disabled.svg);
+                    background-repeat: no-repeat;
+                    min-width: 99px;
+                    min-height: 99px;
+                    margin-left: 10px;
+                }
+                .vietnam:hover {
+                    background-image: url(../icons/emojione_flag-for-vietnam.svg);
+                    background-repeat: no-repeat;
+                }
+            .down-hotspot {
+                width:100%;
+                float: bottom;
+                height: 100px;
+                margin-top:80px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .down {
+                float: top;
+                margin: 0 auto;
+            }
+
+/* Card Styles */
+.wide-card {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+padding: 40px 0px;
+width:100%;
+background: rgba(241, 214, 219, 0.25);
+box-sizing: border-box;
+backdrop-filter: blur(20px);
+margin: 0px 0px;
+}
+
 /* ----------------------- */
 /* Typography */
 p {
