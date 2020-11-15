@@ -1,4 +1,4 @@
-/* * {border:1px solid red} */
+* {border:1px solid red}
 
 html {
     scroll-behavior: smooth;
@@ -23,21 +23,20 @@ nav {
     position:fixed;
     justify-content: space-between;
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 0;
     top: 0;
     background-color: rgba(241,214,219,0.25);
     backdrop-filter: blur(8px);
-    width:100%;
+    width: 100%;
     align-items: center;
+    z-index: 100;
 }
     .logo {
-        width: 1;
-    }
-    .nav-space {
-        width: 1;
+        float: left;
+        margin: 0 20px;
     }
     .contact {
-        width: 2;
+        width: 1fr;
         float:right;
         display: flex;
         justify-content: space-between;
@@ -56,32 +55,24 @@ section {
     .hero {
         float:top;
         height: 800px;
-        width: 100%;
         overflow: hidden;
+        z-index: 1;
+        margin: 20px 20px 80px 20px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 20px;
     }
+
         .statement-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: absolute;
-            top: 200px;
-            width:100%;
+            grid-column: 2 / -1;
+            grid-row: 3 / 7;
         }
-            .greeting {
-                margin: 0 0 20px 80px;   
-            }
-            #statement {
-                font-size: 24px;
-                margin: 0 0 10px 80px;
-            }
-            #end-statement {
-                margin: 0 0 40px 80px;
-            }
             #languages {
                 display:flex;
                 align-items: top;
                 overflow: visible;
-                margin-left: 80px;
+                /* margin-left: 80px; */
                 }
                 .english {
                     background-image: url(../icons/emojione_flag-for-united-kingdom.svg);
@@ -99,6 +90,7 @@ section {
                     min-width: 99px;
                     min-height: 99px;
                     margin: 0 10px;
+                    cursor: pointer;
                 }
                 .russian:hover {
                     background-image: url(../icons/emojione_flag-for-russia.svg);
@@ -110,23 +102,24 @@ section {
                     min-width: 99px;
                     min-height: 99px;
                     margin-left: 10px;
+                    cursor: pointer;
                 }
                 .vietnam:hover {
                     background-image: url(../icons/emojione_flag-for-vietnam.svg);
                     background-repeat: no-repeat;
                 }
             .down-hotspot {
-                width:100%;
-                float: bottom;
+                grid-row: -1;
+                grid-column: 1 / -1;
                 height: 100px;
-                margin-top:80px;
-                display: flex;
-                justify-content: center;
+                margin: 80px auto 0 auto;
+                align-self: center;
             }
 
             .down {
                 float: top;
                 margin: 0 auto;
+                align-self: center;
             }
 
 /* Card Styles */
@@ -140,7 +133,7 @@ width:100%;
 background: rgba(241, 214, 219, 0.25);
 box-sizing: border-box;
 backdrop-filter: blur(20px);
-margin: 0px 0px;
+margin: 0 auto;
 }
 
 /* ----------------------- */
