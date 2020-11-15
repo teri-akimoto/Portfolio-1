@@ -1,4 +1,4 @@
-* {border:1px solid red}
+/* * {border:1px solid red} */
 
 html {
     scroll-behavior: smooth;
@@ -49,9 +49,6 @@ nav {
             }
 
 /*Hero Styles*/
-section {
-    width:100%;
-    }
     .hero {
         float:top;
         height: 800px;
@@ -123,23 +120,90 @@ section {
             }
 
 /* Card Styles */
+.wide-card-column {
+    padding: 0;
+}
 .wide-card {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-padding: 40px 0px;
-width:100%;
-background: rgba(241, 214, 219, 0.25);
-box-sizing: border-box;
 backdrop-filter: blur(20px);
-margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: 1fr, 1fr;
+gap: 20px;
+padding: 40px 20px;
+}
+    .wide-card-content {
+        grid-column: 7 / span 4;
+        grid-row: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-thumbnail {
+        grid-column: 2 / span 6;
+        grid-row: 1 / -1;
+        overflow: hidden;
+        position: relative;
+    }
+    .card-heading, .card-description {
+        padding-bottom: 40px;
+    }
+    .card-heading span {
+        font-style: italic;
+    }
+    .card-date {
+        padding-bottom: 20px;
+        color: #0A1E63;
+    }
+#case-study1, #case-study3 {
+    background-color: rgba(241, 214, 219, 0.25);
+}
+#case-study2 {
+    background: rgba(255, 255, 255, 0.25);
 }
 
+/* Footer Styles */
+footer {
+    margin-top: 80px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(241, 214, 219, 0.25);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+}
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 4 / span 6;
+    }
+        /* .footer-header {
+            grid-column: 4 / span 6;
+            grid-row: 1;
+        }
+        .contact {
+            grid-column: 5 / span 4;
+        }
+        .footer-content p {
+            align-self: center;
+        } */
+
 /* ----------------------- */
+/*Button Styles*/
+button {
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: rgba(241,214,219,0.25);
+    backdrop-filter: blur(8px);
+}
+
 /* Typography */
 p {
     font-family: 'Nunito', sans-serif;
+    font-size: 18px;
 }
 
 h1, h2 {
@@ -152,19 +216,21 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 36px;
 }
 
-.italic {
+.italic span {
     font-style: italic;
 }
 
-.bold {
-    font-style: bold;
+.bold span {
+    font-weight: bold;
 }
 
-a {
+button, a {
+  font-size: 24px;
   font-style: none;
   color: #0A1E63;
-  font-weight: bold;
+  font-weight: 600; /*semi-bold*/
+  cursor: pointer;
 }
