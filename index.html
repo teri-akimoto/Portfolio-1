@@ -4,24 +4,42 @@
     <title>Hoang Lan Nguyen's Portfolio</title>
     <link href="css/index.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-<body>
+</head>
 
-    <!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<body>
 <nav>
-    <img class='logo' src='images/logo.svg' height='64px'>
+    <a href="index.html"><img class='logo' src='images/logo.svg' height='64px'></a>
     <div class="nav-space"></div>
     <div class='contact'>
         <div class="contact-method"><p>+1 (657) 252-2544</p>
         </div>
-        <div class='contact-method'><img src='icons/et_email.svg' sizes='32px 32px'></div>
-        <div class='contact-method'><img src='icons/et_linkedin.svg' sizes='32px 32px'></div>
-        <div class='contact-method'><img src='icons/et_dribbble.svg' sizes='32px 32px'></div>
-        <img id="menu-icon" src=icons/menu-open.svg width=50px height=50px>
+        <div class='contact-email'><img src='icons/et_email.svg' alt="email" sizes='32px 32px'></div>
+        <div class='contact-linkedin'><img src='icons/et_linkedin.svg' alt="linkedin" sizes='32px 32px'></div>
+        <div class='contact-dribbble'><img src='icons/et_dribbble.svg' alt="dribbble" sizes='32px 32px'></div>
+        <img id="open-icon" src="icons/menu-open.svg" width=50px height=50px onclick="openmenu()">
     </div>
     </nav>
-
+<!-- Full-screen Menu -->
+    <ul id="menu" class="overlay-menu">
+        <li id="home-link"><a href="index.html"><h2>Home</h2></a></li>
+        <li id="about-link"><a href="pages/About.html"><h2>About</h2></a></li>
+        <li id="case-studies-link"><a href="pages/Case-Studies.html"><h2>Case Studies</h2></a></li>
+        <li id="illustrations-link"><a href="#"><h2>Illustrations</h2></a></li>
+        <img id="close-icon" src="icons/menu-close.svg" width=50px height=50px onclick="closemenu()">
+        <div id="overlay-top" class="overlay-menu">
+            <a href="index.html"><img class='logo' src='images/logo.svg' height='64px'></a>
+            <div class="nav-space"></div>
+            <div class='contact'>
+                <div class="contact-method"><p>+1 (657) 252-2544</p></div>
+                <div class='contact-email'><img src='icons/et_email.svg' alt="email" sizes='32px 32px'></div>
+                <div class='contact-linkedin'><img src='icons/et_linkedin.svg' alt="linkedin" sizes='32px 32px'></div>
+                <div class='contact-dribbble'><img src='icons/et_dribbble.svg' alt="dribbble" sizes='32px 32px'></div>
+                <div id="empty-icon">
+            </div>
+        </div>
+    </ul>
 <!-- Hero -->
 <section>
     <div class='hero'>
@@ -72,20 +90,32 @@
     </div>
 </section>
 
+<!-- Footer -->
 <footer>
     <div class="footer-content">
         <h2 id="footer-header">Let's work on solutions together!</h2>
         <p>+1 (657) 252-2544</p>
         <div class='contact'>
-            <div class='contact-method'><img src='icons/et_email.svg' sizes='32px 32px'></div>
-            <div class='contact-method'><img src='icons/et_linkedin.svg' sizes='32px 32px'></div>
-            <div class='contact-method'><img src='icons/et_dribbble.svg' sizes='32px 32px'></div>
-            <div class='contact-method'><img src='icons/et-openmoji_instagram.svg' sizes='32px 32px'></div>
+            <div class='contact-email'><img src='icons/et_email.svg' alt="email" sizes='32px 32px'></div>
+            <div class='contact-linkedin'><img src='icons/et_linkedin.svg' alt="linkedin" sizes='32px 32px'></div>
+            <div class='contact-dribbble'><img src='icons/et_dribbble.svg' alt= "dribbble" sizes='32px 32px'></div>
+            <div class='contact-instagram'><img src='icons/et-openmoji_instagram.svg' alt="instagram" sizes='32px 32px'></div>
         </div>
         <p>© Hoang Lan Nguyen 2020</p>
     </div>
 </footer>
-</body>
 
+<!-- JavaScript -->
+<script>
+    var menu = document.getElementById("menu");
+    function openmenu(){
+        menu.style.top="0";
+    }
+    
+    function closemenu(){
+      menu.style.top = "-100vh";
+    }
+</script>
+</body>
 
 </html>

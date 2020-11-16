@@ -43,11 +43,82 @@ nav {
         align-items: center;
         margin: 0px 20px;
     }
-            .contact-method {
-            display: inline;
-            margin: 0 20px;
-            }
-
+    #open-icon {
+        cursor: pointer;
+    }
+#overlay-top {
+    display: flex;
+    position:fixed;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 0;
+    top: 0;
+    background-color: rgba(241,214,219,);
+    width: 100%;
+    align-items: center;
+    z-index: 105;
+}
+    #empty-icon {
+        width: 50px;
+        height: 50px;
+    }
+#menu {
+    position: fixed;
+    z-index: 100;
+    top: -100vh;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 214, 219);
+    backdrop-filter: blur(8px);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    #menu a {
+        text-decoration: none;
+        color: #0A1E63;
+    }
+    #menu li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #home-link:hover {
+        background-image: url(../images/brush-1.svg);
+        background: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #about-link:hover {
+        background-image: url(../images/brush-2.svg);
+        background: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }   
+    #case-studies-link:hover {
+    background-image: url(../images/brush-3.svg);
+    background: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }   
+    #illustrations-link:hover {
+    background-image: url(../images/brush-5.svg);
+    background: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    #close-icon {
+        position: absolute;
+        cursor: pointer;
+        top: 15px;
+        right: 20px;
+        background: rgb(241, 214, 219);
+        z-index: 110;
+    }
 /*Hero Styles*/
     .hero {
         float:top;
@@ -191,6 +262,26 @@ footer {
         } */
 
 /* ----------------------- */
+/* Icon Styles */
+.contact-email, .contact-linkedin, .contact-dribbble, .contact-instagram {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    display: inline;
+    margin: 0 20px;
+}
+.contact-email:hover {
+    background-image: url(../icons/et_email-hover.svg);
+}
+.contact-linkedin:hover {
+    background-image: url(../icons/et_linkedin-hover.svg);
+}
+.contact-dribbble:hover {
+    background-image: url(../icons/et_dribbble-hover.svg);
+}
+.contact-instagram:hover {
+    background-image: url(../icons/et-openmoji_instagram-hover.svg);
+}
+
 /*Button Styles*/
 button {
     border: 1px solid black;
@@ -198,6 +289,15 @@ button {
     padding: 10px 20px;
     background-color: rgba(241,214,219,0.25);
     backdrop-filter: blur(8px);
+}
+
+button:hover {
+    background-color: rgb(241,214,219);
+}
+
+button:active:hover {
+    background-color: #0A1E63;
+    color: #ffffff;
 }
 
 /* Typography */
