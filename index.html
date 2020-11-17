@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="Home-bg">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoang Lan Nguyen's Portfolio</title>
@@ -11,7 +11,7 @@
 <!-- Navigation Bar -->
 <body>
 <nav>
-    <a href="index.html"><img class='logo' src='images/logo.svg' height='64px'></a>
+    <a href="index.html"><img class='logo' src='images/logo.svg' alt="My Logo" height='64px'></a>
     <div class="nav-space"></div>
     <div class='contact'>
         <div class="contact-method"><p>+1 (657) 252-2544</p></div>
@@ -22,6 +22,7 @@
         <img id="open-icon" src="icons/menu-open.svg" width=50px height=50px onclick="openmenu()">
     </div>
 </nav>
+
 <!-- Full-screen Menu -->
     <ul id="menu" class="overlay-menu">
         <li id="home-link"><a href="index.html"><h2>Home</h2></a></li>
@@ -42,6 +43,7 @@
             </div>
         </div>
     </ul>
+
 <!-- Hero -->
 <section>
     <div class='hero'>
@@ -69,7 +71,7 @@
             <h2 class="card-heading">Endangered Species Redesign</h2>
             <p class="card-date">Sept 2020 (3 weeks)</p>
             <p class="card-description">UX Case Study for government website UI & IA redesign.</p>
-            <button class="see-more">see more</button>
+            <div class="button" id="see-more">see more</div>
         </div>
     </div>
     <div id= "case-study2" class="wide-card">
@@ -78,7 +80,7 @@
             <h2 class="card-heading">e<span class="italic">motion</span> Mood Tracker App</h2>
             <p class="card-date">Aug 2020 (3 weeks)</p>
             <p class="card-description">UX Case Study for minimal input mood tracking and suggestions generator based on selected mood.</p>
-            <button class="see-more">see more</button>
+            <div class="button" id="see-more">see more</div>
         </div>
     </div>
     <div id= "case-study3" class="wide-card">
@@ -87,7 +89,7 @@
             <h2 class="card-heading">CORAL NPO Redesign</h2>
             <p class="card-date">Oct 2020 (3 weeks)</p>
             <p class="card-description">UX Case Study for donating, volunteering with and learning ways to live sustainably for a coral saving organization.</p>
-            <button class="see-more">see more</button>
+            <div class="button" id="see-more">see more</div>
         </div>
     </div>
 </section>
@@ -115,7 +117,7 @@
     }
     
     function closemenu(){
-      menu.style.top = "-100vh";
+      menu.style.top = "-200vh";
     }
 </script>
 </body>
