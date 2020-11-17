@@ -1,4 +1,5 @@
 /* * {border:1px solid red} */
+
 html {
     scroll-behavior: smooth;
     padding: 0;
@@ -7,13 +8,13 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 1500px;
+    height: 1000px;
 }
 
 body {
     padding: 0;
     margin: 0;
-    height: 1500px;
+    height: 1500ps;
     }
 
 /*Navigation Styles*/
@@ -41,6 +42,9 @@ nav {
         justify-content: space-between;
         align-items: center;
         margin: 0px 20px;
+    }
+    #open-icon {
+        cursor: pointer;
     }
 #overlay-top {
     display: flex;
@@ -128,18 +132,15 @@ nav {
         gap: 20px;
     }
 
-        .greeting {
-            grid-column: 2 / -1;
-        }
         .statement-section {
             grid-column: 2 / -1;
-            grid-row: 3 / -1;
+            grid-row: 3 / 7;
         }
             #languages {
                 display:flex;
                 align-items: top;
                 overflow: visible;
-
+                /* margin-left: 80px; */
                 }
                 .english {
                     background-image: url(../icons/emojione_flag-for-united-kingdom.svg);
@@ -192,48 +193,30 @@ nav {
 /* Card Styles */
 .wide-card-column {
     padding: 0;
-    margin: 0;
-    width: 100%;
 }
 .wide-card {
 backdrop-filter: blur(20px);
 display: grid;
 grid-template-columns: repeat(12, 1fr);
-grid-template-rows: 1fr 1fr;
+grid-template-rows: 1fr, 1fr;
 gap: 20px;
 padding: 40px 20px;
 }
     .wide-card-content {
-        grid-column: -2 / -6;
+        grid-column: 7 / span 4;
         grid-row: 1 / -1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        min-width: 100%;
     }
     
     .card-thumbnail {
-        grid-column: 2 / 8;
+        grid-column: 2 / span 6;
         grid-row: 1 / -1;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        background-position: center center;
-        flex-direction: row;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        cursor:pointer;
+        position: relative;
     }
-        #card-thumbnail1 {
-            background-image: url(../images/endangered\ species\ all\ devices\ cover.png);
-        }
-        #card-thumbnail2 {
-            background-image: url(../images/emotion\ cover.png);
-        }
-        #card-thumbnail3 {
-            background-image: url(../images/CORAL\ all\ devices\ cover.png);
-        }
-    .card-description {
+    .card-heading, .card-description {
         padding-bottom: 40px;
     }
     .card-heading span {
@@ -267,19 +250,7 @@ footer {
         align-items: center;
         grid-column: 4 / span 6;
     }
-        #footer-header, .footer-content p {
-            text-align: center;
-        }
-
-/* ----------------------- */
-/* Icon Styles */
-#open-icon {
-    cursor: pointer;
-}
-.contact-phone {
-    display: none;
-}
-.contact-phone, .contact-email, .contact-linkedin, .contact-dribbble, .contact-instagram {
+.contact-email, .contact-linkedin, .contact-dribbble, .contact-instagram {
     cursor: pointer;
     background-repeat: no-repeat;
     display: inline;
@@ -349,83 +320,4 @@ button, a {
   color: #0A1E63;
   font-weight: 600; /*semi-bold*/
   cursor: pointer;
-}
-
-/* Resonsive Breakpoints */
-@media only screen and (max-width: 1000px) {
-.logo {
-    display: none;
-    float: left;
-}
-.contact {
-    width: 100%;
-}
-    .contact-method {
-        display: none;
-    }
-    .contact-phone {
-        display: inline;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-/* Navigation Styles */
-.logo {
-    display: none;
-    float: left;
-}
-.contact {
-    width: 100%;
-}
-    .contact-method {
-        display: none;
-    }
-    .contact-phone {
-        display: inline;
-    }
-/* Hero Styles */
-.hero {
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-}
-    .statement-section {
-        grid-column: 1 / -1;
-        grid-row: 2 / -1;
-    }
-    .greeting {
-        grid-column: 1 / -1;
-    }
-/* Card Styles */
-.wide-card-column {
-    margin-right: 0;
-}
-.wide-card {
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: 1fr 1fr;
-}
-    .card-thumbnail {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-    }
-    .wide-card-content {
-        grid-column: 1 / -1;
-        grid-row: 2 / -1;
-    }
-/* Button Styles */
-.see-more {
-    width: 100%;
-}
-#close-icon {
-    position: fixed;
-    cursor: pointer;
-    top: 10px;
-}
-/* Footer Styles */
-footer {
-    grid-template-columns: repeat(4, 1fr);
-}
-    .footer-content {
-        grid-column: 1 / -1;
-    }
 }

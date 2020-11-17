@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoang Lan Nguyen's Portfolio</title>
     <link href="css/index.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 
 <!-- Navigation Bar -->
@@ -13,14 +14,14 @@
     <a href="index.html"><img class='logo' src='images/logo.svg' height='64px'></a>
     <div class="nav-space"></div>
     <div class='contact'>
-        <div class="contact-method"><p>+1 (657) 252-2544</p>
-        </div>
+        <div class="contact-method"><p>+1 (657) 252-2544</p></div>
+        <div class='contact-phone'><img src='icons/ph_phone-call-light.svg' alt="mobile" sizes='32px 32px'></div>
         <div class='contact-email'><img src='icons/et_email.svg' alt="email" sizes='32px 32px'></div>
         <div class='contact-linkedin'><img src='icons/et_linkedin.svg' alt="linkedin" sizes='32px 32px'></div>
         <div class='contact-dribbble'><img src='icons/et_dribbble.svg' alt="dribbble" sizes='32px 32px'></div>
         <img id="open-icon" src="icons/menu-open.svg" width=50px height=50px onclick="openmenu()">
     </div>
-    </nav>
+</nav>
 <!-- Full-screen Menu -->
     <ul id="menu" class="overlay-menu">
         <li id="home-link"><a href="index.html"><h2>Home</h2></a></li>
@@ -33,6 +34,7 @@
             <div class="nav-space"></div>
             <div class='contact'>
                 <div class="contact-method"><p>+1 (657) 252-2544</p></div>
+                <div class='contact-phone'><img src='icons/ph_phone-call-light.svg' alt="mobile" sizes='32px 32px'></div>
                 <div class='contact-email'><img src='icons/et_email.svg' alt="email" sizes='32px 32px'></div>
                 <div class='contact-linkedin'><img src='icons/et_linkedin.svg' alt="linkedin" sizes='32px 32px'></div>
                 <div class='contact-dribbble'><img src='icons/et_dribbble.svg' alt="dribbble" sizes='32px 32px'></div>
@@ -61,31 +63,31 @@
 
 <!--Case Studies-->
 <section class="wide-card-column">
-    <div id= "case-study1" class="wide-card">
-        <img class="card-thumbnail" src="images/endangered species all devices cover.png" width="600px" alt="Endangerd-Species-Mockups">
+    <div id="case-study1" class="wide-card">
+        <div id="card-thumbnail1" class="card-thumbnail"></div>
         <div class="wide-card-content">
             <h2 class="card-heading">Endangered Species Redesign</h2>
             <p class="card-date">Sept 2020 (3 weeks)</p>
             <p class="card-description">UX Case Study for government website UI & IA redesign.</p>
-            <button>see more</button>
+            <button class="see-more">see more</button>
         </div>
     </div>
     <div id= "case-study2" class="wide-card">
-        <img class="card-thumbnail" src="images/emotion cover.png" width="600px" alt="emotion-App-Mockups">
+        <div id="card-thumbnail2" class="card-thumbnail"></div>
         <div class="wide-card-content">
             <h2 class="card-heading">e<span class="italic">motion</span> Mood Tracker App</h2>
             <p class="card-date">Aug 2020 (3 weeks)</p>
             <p class="card-description">UX Case Study for minimal input mood tracking and suggestions generator based on selected mood.</p>
-            <button>see more</button>
+            <button class="see-more">see more</button>
         </div>
     </div>
     <div id= "case-study3" class="wide-card">
-        <img class="card-thumbnail" src="images/CORAL all devices cover.png" width="600px" alt="CORAL-NPO-Mockups">
+        <div id="card-thumbnail3" class="card-thumbnail"></div>
         <div class="wide-card-content">
             <h2 class="card-heading">CORAL NPO Redesign</h2>
             <p class="card-date">Oct 2020 (3 weeks)</p>
             <p class="card-description">UX Case Study for donating, volunteering with and learning ways to live sustainably for a coral saving organization.</p>
-            <button>see more</button>
+            <button class="see-more">see more</button>
         </div>
     </div>
 </section>
