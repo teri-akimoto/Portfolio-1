@@ -266,6 +266,7 @@ padding: 40px 20px;
     align-items: center;
     text-align: center;
     z-index: 110;
+    transition: all 1s ease;
 }
     .side-tab {
         margin: 20px auto;
